@@ -1,0 +1,64 @@
+/* eslint no-unknownAt:0 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.flex-center {
+		@apply flex items-center justify-center;
+	}
+}
+
+.main {
+	/* Prevent scrollbar from shifting content */
+	padding-left: calc(100vw - 100%);
+}
+
+.main,
+.navbar {
+	transition: margin-left 0.5s;
+}
+
+/* Status list items */
+.statusList > li:not(:last-child)::after {
+	content: "";
+	width: 1px;
+	height: 8px;
+	background-color: #000;
+	border-left: 0.1px solid gray;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+/* Replace vendor default outline */
+input:focus {
+	outline: 2px solid rgb(186, 186, 186);
+}
+
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+	visibility: hidden;
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+:not(:hover)::-webkit-scrollbar-thumb {
+	background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}

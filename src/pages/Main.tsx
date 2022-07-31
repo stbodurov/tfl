@@ -29,7 +29,7 @@ const Main = () => {
 				/>
 				{!showMenu && (
 					<button
-						className="absolute w-12 h-12 text-xl font-bold bg-gray-200 bottom-5 left-5 flex-center active:bg-gray-300 mb- rounded-3xl hover:shadow-md"
+						className="fixed w-12 h-12 text-xl font-bold bg-gray-200 bottom-5 left-5 flex-center active:bg-gray-300 mb- rounded-3xl hover:shadow-md"
 						onClick={() => setShowMenu(true)}
 					>
 						&gt;
